@@ -1,0 +1,12 @@
+{% extends 'music/layout.html' %}
+
+{% block title %}Bands{% endblock %}
+
+{% block content %}
+    {% for el in data %}
+        <div class="box">
+            <p>{{ el.name }}</p>
+            <a href="{{ el.get_absolute_url }}">Detail</a>
+        </div>
+    {% endfor %}
+{% endblock %}
